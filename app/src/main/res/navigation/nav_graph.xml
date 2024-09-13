@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:label="navigation"
+    app:startDestination="@id/weatherFragment">
+
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.example.mytravelapp.WeatherFragment"
+        android:label="Weather Fragment"
+        tools:layout="@layout/fragment_weather">
+        <action
+            android:id="@+id/action_weatherFragment_to_currencyFragment"
+            app:destination="@id/currencyFragment" />
+        <action
+            android:id="@+id/action_weatherFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+        <action
+            android:id="@+id/action_weatherFragment_to_settingsActivity"
+            app:destination="@id/settingsActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/currencyFragment"
+        android:name="com.example.mytravelapp.CurrencyFragment"
+        android:label="Currency Fragment"
+        tools:layout="@layout/fragment_currency">
+        <action
+            android:id="@+id/action_currencyFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment" />
+        <action
+            android:id="@+id/action_currencyFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+        <action
+            android:id="@+id/action_currencyFragment_to_settingsActivity"
+            app:destination="@id/settingsActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.mytravelapp.FavoritesFragment"
+        android:label="Favorites Fragment"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_favoritesFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment" />
+        <action
+            android:id="@+id/action_favoritesFragment_to_currencyFragment"
+            app:destination="@id/currencyFragment" />
+        <action
+            android:id="@+id/action_favoritesFragment_to_settingsActivity"
+            app:destination="@id/settingsActivity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/settingsActivity"
+        android:name="com.example.mytravelapp.SettingsActivity"
+        android:label="Settings Activity"
+        tools:layout="@layout/activity_settings" />
+</navigation>
