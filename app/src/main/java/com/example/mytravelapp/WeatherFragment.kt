@@ -50,7 +50,7 @@ class WeatherFragment : Fragment() {
     }
 
     private fun fetchWeatherData(city: String) {
-        val url = "https://api.openweathermap.org/data/2.5/weather?q=$city&appid=4276426580d8df965de7c9a69c8d8728&units=metric"
+        val url = "https://api.openweathermap.org/data/2.5/weather?q=$city&appid=*****&units=metric"
         val requestQueue: RequestQueue = Volley.newRequestQueue(requireContext())
         val stringRequest = StringRequest(Request.Method.GET, url,
             { response ->
